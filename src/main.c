@@ -4,7 +4,7 @@
 #include "sys.h"
 #include "usart.h"	 
 
-#define START_TASK_PRIO				3//任务优先级	
+#define START_TASK_PRIO				3//prio lft
 #define START_STK_SIZE 				128//任务堆栈大小
 OS_TCB StartTaskTCB;//任务控制块
 CPU_STK START_TASK_STK[START_STK_SIZE];//任务堆栈
@@ -138,6 +138,4 @@ void led1_task(void *p_arg)
 		OSTimeDlyHMSM(0,0,0,500,OS_OPT_TIME_HMSM_STRICT,&err); //延时500ms
 	}
 }
-
-
-
+		
