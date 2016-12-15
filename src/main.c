@@ -4,7 +4,7 @@
 #include "sys.h"
 #include "usart.h"	 
 
-#define START_TASK_PRIO				3//优先级
+#define START_TASK_PRIO				2//优先级
 #define START_STK_SIZE 				128//取
 OS_TCB StartTaskTCB;//任务控制块
 CPU_STK START_TASK_STK[START_STK_SIZE];//任务堆栈
