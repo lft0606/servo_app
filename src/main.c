@@ -120,7 +120,7 @@ void led0_task(void *p_arg)
 	OS_ERR err;
 	while(1)
 	{
-		LED0 = !LED0;
+		LED1 = !LED1;
 		OSTimeDlyHMSM(0,0,0,500,OS_OPT_TIME_PERIODIC,&err);//—” ±500ms
 	}
 }
@@ -132,9 +132,9 @@ void led1_task(void *p_arg)
 	p_arg = p_arg;
 	while(1)
 	{
-		LED1 = 0;
+		LED0 = 0;
 		OSTimeDlyHMSM(0,0,0,200,OS_OPT_TIME_HMSM_STRICT,&err); //—” ±200ms
-		LED1 = 1;
+		LED0 = 1;
 		OSTimeDlyHMSM(0,0,0,500,OS_OPT_TIME_HMSM_STRICT,&err); //—” ±500ms
 	}
 }
